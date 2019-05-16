@@ -2,7 +2,6 @@ package it.unibs.arnaldo.lezione5.squareroots;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
 /**
  * Interfaccia rappresentante il comportamento del parsing di un'espressione e che fornisce il medodo

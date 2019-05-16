@@ -72,8 +72,7 @@ public class OperatorNode implements Node, NodeParser {
         this.rightChild = this.genRandomNode(maxDepth - 1);
 
         // scelta casuale di un operatore fra quelli disponibili
-        Operator op = this.opers.random();
-        this.oper = op;
+        this.oper = this.opers.random();
     }
 
     /**

@@ -25,12 +25,12 @@ public class Node {
     /**
      * Costruttore.
      *
-     * @param _label
+     * @param _label L'etichetta del nuovo nodo
      */
     public Node(String _label) {
         this.id = Node.idCounter++;
         this.label = _label;
-        this.adjacents = new LinkedList<Node>();
+        this.adjacents = new LinkedList<>();
     }
 
     /**
@@ -47,7 +47,7 @@ public class Node {
      * Sulla base di una certa percentuale, decide se aggiungere un nuovo nodo
      * come adiacente al nodo stesso, o se richiamare l'aggiunta casuale su un suo adiacente.
      *
-     * @param new_label
+     * @param new_label L'etichetta del nodo casuale
      */
     public void addNewRandomNode(String new_label) {
         if (this.adjacents.size() < 1 || Math.random() < ADJACENCY_PERCENTAGE) {
@@ -85,13 +85,22 @@ public class Node {
         return this.adjacents.size();
     }
 
+
+    /**
+     * Metodo ricorsivo aggiunto, che permette l'effettiva ricerca del label all'interno del nodo
+     * @param label L'etichetta da cercare
+     * @return      True se il valore è trovato, false altrimenti
+     */
     public boolean find(String label) {
+        // controllo prima l'etichetta del nodo stesso
         if (this.label.equals(label)) return true;
 
+        // controllo tutti i nodi figli e, se trovo qualcosa in qualche figlio, restituisco true
         for (Node child : this.adjacents) {
             if (child.find(label)) return true;
         }
 
+        // se non ho trovato nulla, restituisco false
         return false;
     }
 

@@ -13,5 +13,5 @@ public interface Operation {
      * @param r Il secondo parametro
      * @return Il risultato
      */
-    public double calcValue(double l, double r);
+    double calcValue(double l, double r);
 }

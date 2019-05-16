@@ -36,9 +36,9 @@ public final class IntoTheWoods {
      * - 0 indica il totale fallimento del test.
      * - 1 indica il totale successo del test.
      *
-     * @param size
-     * @param num_labels
-     * @return
+     * @param size       La dimensione dell'albero
+     * @param num_labels Il numero di etichette
+     * @return Un valore tra 0 e 1 indicante il livello di successo del test
      */
     private static double testTree(int size, int num_labels) {
         List<String> labels = generateLabels(num_labels);
@@ -88,7 +88,7 @@ public final class IntoTheWoods {
     private static List<String> generateLabels(int numberOfLabels) {
         List<String> labels = new ArrayList<>(numberOfLabels);
         for (int l = 0; l < numberOfLabels; l++) {
-            StringBuffer s = new StringBuffer();
+            StringBuilder s = new StringBuilder();
             for (int c = 0; c < CHAR_PER_LABEL; c++) {
                 s.append(alphabet[(int) (Math.random() * alphabet.length)]);
             }

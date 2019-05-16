@@ -1,8 +1,5 @@
 package it.unibs.arnaldo.lezione5.eulerphi;
 
-
-import java.util.HashMap;
-
 public class EulerPhi {
 
     private static final int TESTS = 100000;

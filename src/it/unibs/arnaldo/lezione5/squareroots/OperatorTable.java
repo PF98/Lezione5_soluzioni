@@ -27,7 +27,7 @@ public class OperatorTable {
 
     /**
      * Metodo che aggiunge un operatore all'attuale livello di precedenza nella tabella
-     * @param operator
+     * @param operator L'operatore da aggiungere alla tabella
      */
     public void add(Operator operator) {
         this.add(operator, this.precedenceLevel);

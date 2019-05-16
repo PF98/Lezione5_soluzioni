@@ -11,25 +11,25 @@ public interface Node {
      * @return Il valore numerico del nodo
      * @throws IllegalArgumentException Se non è possibile effettuare questo calcolo
      */
-    public double calcValue() throws IllegalArgumentException;
+    double calcValue() throws IllegalArgumentException;
 
     /**
      * Metodo che formatta con le parentesi adatte questo nodo
      * @return L'espressione rappresentata da questo nodo con le parentesi
      */
-    public String parenthesize();
+    String parenthesize();
 
     /**
      * Metodo che genera un "sottoalbero" a questo nodo, di profondità massima data
      * @param maxDepth La massima profondità dell'albero
      */
-    public void randomize(int maxDepth);
+    void randomize(int maxDepth);
 
     /**
      * Metodo che formatta l'espressione con le sole parentesi necessarie al rispetto dell'ordine delle operazioni
      * @return La stringa formattata
      */
-    public String necessaryParentheses();
+    String necessaryParentheses();
 
     /**
      * Metodo che formatta l'espressione con le sole parentesi necessarie al rispetto dell'ordine delle operazioni,
@@ -39,5 +39,5 @@ public interface Node {
      *                              e il figlio è sinistro (/destro), false altrimenti
      * @return La stringa formattata
      */
-    public String necessaryParentheses(int fatherPrecedence, boolean sameDirectionAndAssoc);
+    String necessaryParentheses(int fatherPrecedence, boolean sameDirectionAndAssoc);
 }

@@ -55,7 +55,7 @@ public class SquareRoots {
                 tree.parseExpression(expr);
         }
 
-        System.out.printf("%n%nRappresentazione dell'espressione con tutte le parentesi necessarie:%n");
+        System.out.printf("%nRappresentazione dell'espressione con tutte le parentesi, anche quelle non necessarie:%n");
         System.out.println(tree.parenthesize());
 
         System.out.printf("%n%nRappresentazione dell'espressione con solo le parentesi strettamente necessarie:%n");
